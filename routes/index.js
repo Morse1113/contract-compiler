@@ -11,7 +11,7 @@ router.post('/compile', function (req, res, next) {
     let params = req.body;
     console.log(params.input);
     let output = JSON.parse(solc.compile(params.input));
-    res.json({message: 'success', data: output})
+    res.json(output);
 });
 
 module.exports = router;
